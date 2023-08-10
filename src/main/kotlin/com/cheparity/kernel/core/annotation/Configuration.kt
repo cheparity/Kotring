@@ -1,8 +1,8 @@
 package com.cheparity.kernel.core.annotation
 
 
-@Target(AnnotationTarget.FUNCTION)
+@Component
 @MustBeDocumented
-annotation class Bean(
+annotation class Configuration(
     val value: String = "",
 )

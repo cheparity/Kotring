@@ -3,13 +3,14 @@ package com.cheparity.kernel.core.io.property
 import org.jetbrains.annotations.TestOnly
 import java.time.*
 import java.util.*
+import kotlin.reflect.KClass
 
 
 class PropertyResolver(props: Properties? = null) {
 
 
     private var properties: Map<String, String> = HashMap()
-    private var converters = HashMap<Class<*>, ((String) -> Any)>()
+    private var converters = HashMap<KClass<*>, ((String) -> Any)>()
 
     init {
         System.getenv().forEach { (key, value) ->
@@ -21,23 +22,23 @@ class PropertyResolver(props: Properties? = null) {
             }
         }
         //converters init
-        converters[Integer::class.java] = { it.toInt() }
-        converters[Int::class.java] = { it.toInt() }
-        converters[Long::class.java] = { it.toLong() }
-        converters[Float::class.java] = { it.toFloat() }
-        converters[Double::class.java] = { it.toDouble() }
-        converters[Boolean::class.java] = { it.toBoolean() }
-        converters[String::class.java] = { it }
-        converters[Char::class.java] = { it[0] }
-        converters[Short::class.java] = { it.toShort() }
-        converters[Byte::class.java] = { it.toByte() }
-        converters[LocalDate::class.java] = { LocalDate.parse(it) }
-        converters[Date::class.java] = { Date(it.toLong()) }
-        converters[LocalTime::class.java] = { LocalTime.parse(it) }
-        converters[LocalDateTime::class.java] = { LocalDateTime.parse(it) }
-        converters[ZonedDateTime::class.java] = { ZonedDateTime.parse(it) }
-        converters[Duration::class.java] = { Duration.parse(it) }
-        converters[ZoneId::class.java] = { ZoneId.of(it) }
+        converters[Integer::class] = { it.toInt() }
+        converters[Int::class] = { it.toInt() }
+        converters[Long::class] = { it.toLong() }
+        converters[Float::class] = { it.toFloat() }
+        converters[Double::class] = { it.toDouble() }
+        converters[Boolean::class] = { it.toBoolean() }
+        converters[String::class] = { it }
+        converters[Char::class] = { it[0] }
+        converters[Short::class] = { it.toShort() }
+        converters[Byte::class] = { it.toByte() }
+        converters[LocalDate::class] = { LocalDate.parse(it) }
+        converters[Date::class] = { Date(it.toLong()) }
+        converters[LocalTime::class] = { LocalTime.parse(it) }
+        converters[LocalDateTime::class] = { LocalDateTime.parse(it) }
+        converters[ZonedDateTime::class] = { ZonedDateTime.parse(it) }
+        converters[Duration::class] = { Duration.parse(it) }
+        converters[ZoneId::class] = { ZoneId.of(it) }
     }
 
     /**
@@ -68,7 +69,7 @@ class PropertyResolver(props: Properties? = null) {
      * @exception IllegalArgumentException If no converter found for the specified type. Please call [registerConverter]
      */
     @Suppress("UNCHECKED_CAST")
-    fun <T> convert(clazz: Class<T>, value: String, customizedConverter: ((String) -> Any)? = null): T = when {
+    fun <T : Any> convert(clazz: KClass<T>, value: String, customizedConverter: ((String) -> Any)? = null): T = when {
         customizedConverter != null -> customizedConverter(value) as T
         converters.containsKey(clazz) -> converters[clazz]!!(value) as T
         else -> throw IllegalArgumentException(
@@ -77,7 +78,8 @@ class PropertyResolver(props: Properties? = null) {
         )
     }
 
-    fun registerConverter(clazz: Class<*>, converter: (String) -> Any) {
+
+    fun registerConverter(clazz: KClass<*>, converter: (String) -> Any) {
         converters[clazz] = converter
     }
 

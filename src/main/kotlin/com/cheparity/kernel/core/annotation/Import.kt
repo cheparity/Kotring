@@ -1,8 +1,9 @@
 package com.cheparity.kernel.core.annotation
 
+import kotlin.reflect.KClass
 
 @Target(AnnotationTarget.TYPE, AnnotationTarget.CLASS)
 @MustBeDocumented
-annotation class Component(
-    val value: String = "",
+annotation class Import(
+    vararg val value: KClass<*> = [],
 )

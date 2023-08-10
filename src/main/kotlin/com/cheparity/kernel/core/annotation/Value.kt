@@ -1,4 +1,7 @@
 package com.cheparity.kernel.core.annotation
 
 @Target(AnnotationTarget.FIELD)
-annotation class Value()
+@MustBeDocumented
+annotation class Value(
+    val value: String,
+)
