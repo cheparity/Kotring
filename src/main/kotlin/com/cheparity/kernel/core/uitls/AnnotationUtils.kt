@@ -1,6 +1,5 @@
 package com.cheparity.kernel.core.uitls
 
-import com.cheparity.kernel.core.context.BeanDefinition
 import kotlin.reflect.KClass
 
 /**
@@ -41,16 +40,40 @@ fun <A : Annotation> Class<*>.digAnnotation(
     return null
 }
 
-
 /**
- * To determine whether the target class is annotated with the specified annotation
+ * **Unsupported yet! Packages and file facades are not yet supported in Kotlin reflection.**
  *
- * @return Returns true if the target class is annotated with the specified annotation, false otherwise.
+ * Find the annotation on the target class **recursively**
  *
- * @param A The annotation class to find.
+ * Example:
+ * ```kotlin
+ * var componentAnno = UserDao::class.digAnnotation(Component::class)
+ * ```
+ * @return Returns the annotation if found, null otherwise.
+ *
+ * @param annoClass The annotation class to find.
+ *
+ *
  */
-inline fun <reified A : Annotation> KClass<*>.isAnnotatedWith(): Boolean =
-    this::class.java.digAnnotation(A::class.java) != null
+fun <A : Annotation> KClass<*>.digAnnotation(
+    annoClass: KClass<A>,
+    visited: MutableSet<KClass<*>> = mutableSetOf(),
+): A? {
+    if (!visited.add(this)) {
+        return null
+    }
 
-fun BeanDefinition.isConfiguration(): Boolean =
-    this.clazz.digAnnotation(com.cheparity.kernel.core.annotation.Configuration::class.java) != null
+    val directAnnotation = this.java.getAnnotation(annoClass.java)
+    if (directAnnotation != null) {
+        return this.java.getAnnotation(annoClass.java)
+    }
+
+    for (annotation in this.annotations) {
+        val indirectAnnotation = annotation.annotationClass.digAnnotation(annoClass, visited)
+        if (indirectAnnotation != null) {
+            return indirectAnnotation
+        }
+    }
+
+    return null
+}

@@ -5,42 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd0c7a4e-eb9a-45b5-89b2-3760a289c3cf" name="更改" comment="complete basic IO functions">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Autowired.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/ComponentScan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Configuration.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Import.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Order.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Primary.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/ClassPathResource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/AnnotationUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/ClassUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/MainApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/bean/MyBean1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/bean/MyBean2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/ImportConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/MainConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/MainConfigWithParam.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TestApplicationContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/testReflect/Clazz.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/testReflect/Context.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/MainApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Bean.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Bean.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Component.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Component.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Value.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Value.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/ApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/ApplicationContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/implement/AnnotationApplicationContext.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyResolver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/Resource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/Resource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/ResourceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/ResourceResolver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/dao/HelloDao.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/service/implement/HelloServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/service/implement/HelloServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/kotring.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/kotring.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/AnnotationUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/AnnotationUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/ClassUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/ClassUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/kotring.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/kotring.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +38,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cheparity&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e10b925c-6c16-4aab-b16b-428ceb2ec26e" />
+        <option name="url" value="https://github.com/cheparity/Kotring-framework.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/openjdk-20.0.2/lib/src.zip!/java.base/java/net/URI.java" root0="SKIP_INSPECTION" />
@@ -122,7 +111,7 @@
       <recent name="com.cheparity.kernel.core.io.Property" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestApplicationContext.constructorTest">
+  <component name="RunManager" selected="JUnit.TestApplicationContext.testBeanDefinitions">
     <configuration name="TestApplicationContext.constructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kotring" />
       <option name="PACKAGE_NAME" value="" />
@@ -133,42 +122,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplicationContext.createBeanAsEarlySingletonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestApplicationContext.testBasicFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kotring" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestApplicationContext" />
-      <option name="METHOD_NAME" value="createBeanAsEarlySingletonTest" />
+      <option name="METHOD_NAME" value="testBasicFields" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplicationContext.testBeanFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestApplicationContext.testBeanDefinitions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kotring" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestApplicationContext" />
-      <option name="METHOD_NAME" value="testBeanFactory" />
+      <option name="METHOD_NAME" value="testBeanDefinitions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplicationContext.testCreateBeanDefinitions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestApplicationContext.testImport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kotring" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestApplicationContext" />
-      <option name="METHOD_NAME" value="testCreateBeanDefinitions" />
+      <option name="METHOD_NAME" value="testImport" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplicationContext.valueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClazzKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testReflect.ClazzKt" />
       <module name="kotring" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestApplicationContext" />
-      <option name="METHOD_NAME" value="valueTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestApplicationContext.testBeanDefinitions" />
+        <item itemvalue="JUnit.TestApplicationContext.testBasicFields" />
+        <item itemvalue="JUnit.TestApplicationContext.testImport" />
+        <item itemvalue="Kotlin.ClazzKt" />
         <item itemvalue="JUnit.TestApplicationContext.constructorTest" />
-        <item itemvalue="JUnit.TestApplicationContext.valueTest" />
-        <item itemvalue="JUnit.TestApplicationContext.createBeanAsEarlySingletonTest" />
-        <item itemvalue="JUnit.TestApplicationContext.testBeanFactory" />
-        <item itemvalue="JUnit.TestApplicationContext.testCreateBeanDefinitions" />
       </list>
     </recent_temporary>
   </component>
@@ -220,12 +206,24 @@
       <workItem from="1691559317007" duration="1640000" />
       <workItem from="1691561451497" duration="1453000" />
       <workItem from="1691579814780" duration="15213000" />
-      <workItem from="1691631729967" duration="3493000" />
+      <workItem from="1691631729967" duration="8574000" />
+      <workItem from="1691659593470" duration="5701000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="complete basic IO functions" />

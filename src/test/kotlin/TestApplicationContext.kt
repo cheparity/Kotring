@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import kotlin.reflect.full.primaryConstructor
 
 class TestApplicationContext {
-    private val context = AnnotationApplicationContext(MainConfigWithParam::class.java)
+    private val context = AnnotationApplicationContext(MainConfigWithParam::class)
 
     @Test
     fun constructorTest() {
@@ -33,24 +33,27 @@ class TestApplicationContext {
     fun testCreateBeanDefinitions() {
 //        val forName = Class.forName("com.cheparity.test.kotlin.MainApplicationKt")
 //        println(forName)
-        AnnotationApplicationContext(MainConfig::class.java)
+        AnnotationApplicationContext(MainConfig::class)
     }
 
     @Test
     fun testContextWithAnnoValue() {
 //        println(MainConfig::class.findAnnotation<ComponentScan>()?.value?.toList())
-        AnnotationApplicationContext(MainConfig::class.java)
+        AnnotationApplicationContext(MainConfig::class)
 
     }
 
     @Test
     fun testContextWithoutAnnoValue() {
-        AnnotationApplicationContext(MainApplication::class.java)
+        AnnotationApplicationContext(MainApplication::class)
     }
 
     @Test
-    fun testImport() {
-        val context = AnnotationApplicationContext(ImportConfig::class.java)
-        context.peekClassNameSet() //test ok!! :)
+    fun testBeanDefinitions() {
+        val context = AnnotationApplicationContext(ImportConfig::class)
+        context.peekClassNameSet()
+        println("-------------------------------------")
+        context.peekBeanDefinitions()
+        println("-------------------------------------")
     }
 }

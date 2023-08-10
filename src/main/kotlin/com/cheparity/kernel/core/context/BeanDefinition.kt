@@ -1,39 +1,47 @@
 package com.cheparity.kernel.core.context
 
-import com.cheparity.kernel.core.annotation.Component
-import com.cheparity.kernel.core.uitls.*
-import java.lang.reflect.Constructor
-import java.lang.reflect.Method
+import com.cheparity.kernel.core.annotation.Configuration
+import com.cheparity.kernel.core.uitls.digAnnotation
+import kotlin.reflect.KClass
+import kotlin.reflect.KFunction
 
 
 /**
- * Kotlin without @postConstruct and @preDestroy. It uses `init` and `destroy` instead.
+ * A bean's definition. Also: Kotlin doesn't support `@postConstruct` and `@preDestroy`. It uses `init` and `destroy`
+ * instead.
+ *
+ * @param name The key of bean definition.
+ * @param clazz The class of bean. Also: no need to be a KType cause no need to use generics.
+ * @param instance The instance of bean, needs to be initialized later.
+ * @param constructor The constructor function. Null if the bean is annotated with [@Configuration]
+ * @param factoryName If the bean's created by a config class, [factoryName] is the config class' bean name. Null if
+ * not.
+ * @param factoryFunc If the bean's created by a config class, [factoryFunc] stands for the fun to create it. Null if
+ * not.
+ * @param order Init order of the bean. Default 0.
+ * @param primary Verify if the bean is primary, specified by [@Primary]. Default false.
  */
 data class BeanDefinition(
-    val name: String, //the key of bean definition
-    val clazz: Class<*>, //the class of bean
-    var instance: Any? = null, //the instance of bean, needs to be initialized later
-    var constructor: Constructor<*>? = null, //the constructor of bean
-    var factoryName: String = "", //the factory's name if the bean is created by a factory
-    var factoryMethod: Method? = null, //if the bean is created by a factory method, this is the method, otherwise null
-    var order: Int = 0, //the init order of bean
-    var primary: Boolean = false, //if the bean is primary, specified by @Primary
+    val name: String,
+    val clazz: KClass<*>,
+    var instance: Any? = null,
+    var constructor: KFunction<*>? = null,
+    var factoryName: String? = null,
+    var factoryFunc: Function<*>? = null,
+    var order: Int = 0,
+    var primary: Boolean = false,
 ) : Comparable<BeanDefinition> {
-    /**
-     * This is the simplest constructor. You just need to pass a [clazz] to it, and all other args are default.
-     *
-     * @param clazz The class of the bean.
-     */
-    constructor(clazz: Class<*>) : this(
-        clazz = clazz,
-        name = clazz.takeBeanName(clazz.digAnnotation(Component::class.java)!!),
-        order = clazz.getOrder(),
-        constructor = clazz.getSuitableConstructor(),
-        primary = clazz.isPrimary(),
-    )
 
     override fun compareTo(other: BeanDefinition): Int {
         return this.order - other.order
     }
+
+    val configBean: Boolean = this.clazz.java.digAnnotation(Configuration::class.java) != null
+
+    val factoryBean: Boolean = this.factoryFunc != null
+
+    val normalBean: Boolean = !configBean && !factoryBean
+
+    val instantiated: Boolean = this.instance != null
 
 }

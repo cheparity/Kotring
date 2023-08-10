@@ -6,19 +6,18 @@ import com.cheparity.kernel.core.annotation.Configuration
 import com.cheparity.kernel.core.annotation.Import
 import com.cheparity.kernel.core.io.resource.ClassPathResource
 import com.cheparity.kernel.core.io.resource.ResourceResolver
-import com.cheparity.kernel.core.uitls.digAnnotation
-import com.cheparity.kernel.core.uitls.isConfiguration
-import com.cheparity.kernel.core.uitls.scanFactoryMethods
+import com.cheparity.kernel.core.uitls.*
 import org.jetbrains.annotations.TestOnly
 import kotlin.reflect.KClass
+import kotlin.reflect.full.findAnnotation
 
-class AnnotationApplicationContext(private val configClass: Class<*>) {
+class AnnotationApplicationContext(private val configClass: KClass<*>) {
 
     private val pkgToScan: Set<String> =
-        configClass.getAnnotation(ComponentScan::class.java)?.value?.toSet() ?: setOf(configClass.`package`.name)
+        configClass.findAnnotation<ComponentScan>()?.value?.toSet() ?: setOf(configClass.java.`package`.name)
 
     private val importPkgToScan: Set<KClass<*>>? =
-        configClass.getAnnotation(Import::class.java)?.value?.toSet()
+        configClass.findAnnotation<Import>()?.value?.toSet()
 
     private var beans = HashMap<String, BeanDefinition>()
 
@@ -35,10 +34,10 @@ class AnnotationApplicationContext(private val configClass: Class<*>) {
     }
 
     private fun instantiateBeans(beansRCreating: HashSet<String>) {
-        beans.filter { it.value.isConfiguration() }.toSortedMap().forEach { (beanName, beanDef) ->
+        beans.filter { it.value.configBean }.toSortedMap().forEach { (beanName, beanDef) ->
             beanDef.createBeanAsEarlySingleton(beansRCreating)
         }
-        beans.filter { it.value.instance == null }.toSortedMap().forEach { (beanName, beanDef) ->
+        beans.filter { it.value.instantiated }.toSortedMap().forEach { (beanName, beanDef) ->
             beanDef.createBeanAsEarlySingleton(beansRCreating)
         }
     }
@@ -51,12 +50,12 @@ class AnnotationApplicationContext(private val configClass: Class<*>) {
      *     2. 参数标注了@Value，若没有标记则按照默认标注了@Value处理，如 `@value value1 = "abc"` 或者 `value1 = "abc"` 。我们要用PropertyResolver解析属性，把属性值交给构造方法的参数。
      */
     private fun BeanDefinition.createBeanAsEarlySingleton(beansRCreating: HashSet<String>) {
-        if (!beansRCreating.add(this.name)) throw RuntimeException("Circular dependency on bean ${this.name}")
-        val constructor = this.constructor ?: this.factoryMethod!!
-        val parameters = constructor.parameters
-        parameters.forEach { parameter ->
-            
-        }
+//        if (!beansRCreating.add(this.name)) throw RuntimeException("Circular dependency on bean ${this.name}")
+//        val constructor = this.constructor ?: this.factoryMethod!!
+//        val parameters = constructor.parameters
+//        parameters.forEach { parameter ->
+//
+//        }
     }
 
 
@@ -72,7 +71,7 @@ class AnnotationApplicationContext(private val configClass: Class<*>) {
         }
         //continue to search packages if there is an @Import annotation
         importPkgToScan?.forEach { importClass ->
-            val importContext = AnnotationApplicationContext(importClass.java)
+            val importContext = AnnotationApplicationContext(importClass)
             importContext.scanForClasses()
 //            beanFactory.putAll(importContext.beanFactory)
             classNameSet.addAll(importContext.classNameSet)
@@ -83,14 +82,21 @@ class AnnotationApplicationContext(private val configClass: Class<*>) {
 
     private fun createBeanDefinitions() {
         classNameSet.forEach { className ->
-            val clazz = Class.forName(className)
-            val component = clazz.digAnnotation(Component::class.java)
+
+            val clazz = Class.forName(className).kotlin
+            val component = clazz.java.digAnnotation(Component::class.java)
             if (component != null) {
-                val bd = BeanDefinition(clazz)
+                val bd = BeanDefinition(
+                    clazz = clazz,
+                    name = clazz.takeBeanName(clazz.java.digAnnotation(Component::class.java)!!),
+                    order = clazz.getOrder(),
+                    constructor = clazz.getSuitableConstructor(),
+                    primary = clazz.isPrimary(),
+                )
                 if (beans.containsKey(bd.name)) throw RuntimeException("Bean name duplicated ${bd.name}")
                 beans[bd.name] = bd
                 //continue to judge if the class is annotated with `@Configuration`.
-                val configAnno = clazz.digAnnotation(Configuration::class.java)
+                val configAnno = clazz.java.digAnnotation(Configuration::class.java)
                 if (configAnno != null) {
                     scanFactoryMethods(bd.name, clazz, beans)
                 }
@@ -112,16 +118,17 @@ class AnnotationApplicationContext(private val configClass: Class<*>) {
 
 
     @TestOnly
-    fun peekBeanFactory() {
-        println("[beanFactory]")
+    fun peekBeanDefinitions() {
+        println("[beanDefinitions]")
         beans.forEach { (t, u) ->
-            println("$t -> $u")
+            print("[name:$t, configBean:${u.configBean}, factoryBean:${u.factoryBean}] ")
+            println("$u")
         }
     }
 
     @TestOnly
     fun peekClassNameSet() {
-        println("[classNameSet]")
+        println("classNameSet")
         classNameSet.forEach(::println)
     }
 
