@@ -1,5 +1,4 @@
-package com.cheparity.test.kotlin.service
-
+package com.cheparity.app.service
 
 
 interface HelloService {

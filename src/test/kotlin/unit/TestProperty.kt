@@ -1,3 +1,5 @@
+package unit
+
 import com.cheparity.kernel.core.io.property.PropertyResolver
 import java.io.InputStream
 import java.util.*
@@ -12,7 +14,7 @@ class TestProperty {
         val propertyResolver = PropertyResolver(properties)
         propertyResolver.peekProperties()
         assertEquals(propertyResolver.getProperty("windir"), "C:\\Windows")
-        assertEquals(propertyResolver.getProperty("\${windir}"), "C:\\Windows")
-        assertEquals(propertyResolver.getProperty("\${key:defaultValue}"), "defaultValue")
+        assertEquals(propertyResolver.getProperty("#{windir}"), "C:\\Windows")
+        assertEquals(propertyResolver.getProperty("#{key:defaultValue}"), "defaultValue")
     }
 }

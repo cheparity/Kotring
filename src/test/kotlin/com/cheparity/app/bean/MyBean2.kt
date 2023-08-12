@@ -1,4 +1,4 @@
-package com.cheparity.test.kotlin.bean
+package com.cheparity.app.bean
 
 import com.cheparity.kernel.core.annotation.Component
 

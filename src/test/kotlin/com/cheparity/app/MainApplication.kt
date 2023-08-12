@@ -1,4 +1,4 @@
-package com.cheparity.test.kotlin
+package com.cheparity.app
 
 
 class MainApplication

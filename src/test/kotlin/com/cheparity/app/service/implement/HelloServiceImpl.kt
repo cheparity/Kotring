@@ -1,7 +1,7 @@
-package com.cheparity.test.kotlin.service.implement
+package com.cheparity.app.service.implement
 
+import com.cheparity.app.service.HelloService
 import com.cheparity.kernel.core.annotation.Component
-import com.cheparity.test.kotlin.service.HelloService
 
 
 @Component("helloService")
