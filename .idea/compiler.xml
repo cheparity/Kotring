@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="kotring" />
         <module name="kotring2" />
+        <module name="kotring-context" />
       </profile>
     </annotationProcessing>
   </component>

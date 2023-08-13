@@ -5,30 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd0c7a4e-eb9a-45b5-89b2-3760a289c3cf" name="更改" comment="complete basic IO functions">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean3.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/config/MainConfigWithParam.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/unit/TestApplicationContext.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotring-context.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotring-context/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/ConfigurableApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Autowired.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Autowired.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Value.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Value.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyResolver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/MainApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/bean/MyBean1.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/bean/MyBean2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/ImportConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/MainConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/config/MainConfigWithParam.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/service/HelloService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/service/HelloService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/test/kotlin/service/implement/HelloServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/service/implement/HelloServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestApplicationContext.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestProperty.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/TestProperty.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/testReflect/Clazz.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/testReflect/Context.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/kotring.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/kotring.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/kotring.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/kotring.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Autowired.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Autowired.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Bean.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Bean.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Component.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Component.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/ComponentScan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/ComponentScan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Configuration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Import.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Import.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Order.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Primary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Primary.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/annotation/Value.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/annotation/Value.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/ApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/ApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/BeanDefinition.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/BeanDefinition.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyExpr.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/io/property/PropertyExpr.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/property/PropertyResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/io/property/PropertyResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/ClassPathResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/io/resource/ClassPathResource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/Resource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/io/resource/Resource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/io/resource/ResourceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/io/resource/ResourceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/AnnotationUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/uitls/AnnotationUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/uitls/ClassUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/uitls/ClassUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/MainApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/bean/MyBean1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/bean/MyBean2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/bean/MyBean3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/bean/MyBean3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/config/MainConfigWithParam.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/config/MainConfigWithParam.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/service/HelloService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/service/HelloService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/cheparity/app/service/implement/HelloServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/service/implement/HelloServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/TestApplicationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/unit/TestApplicationContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/TestProperty.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotring-context/src/test/kotlin/org/cheparity/app/unit/TestProperty.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +53,8 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Annotation" />
         <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -93,32 +105,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Niyuta/IdeaProjects/kotring2/src/main/kotlin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facet&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "last_opened_file_path": "C:/Users/Niyuta/IdeaProjects/kotring2/src/main/kotlin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facet",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "com.nasller.CodeGlancePro",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Niyuta\IdeaProjects\Kotring-framework\kotring-context" />
       <recent name="C:\Users\Niyuta\IdeaProjects\Kotring-framework\src\test\kotlin\app" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -128,7 +142,7 @@
       <recent name="com.cheparity.kernel.core.io.Property" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestApplicationContext.testInstance">
+  <component name="RunManager" selected="JUnit.TestApplicationContext.testBeanInstance (1)">
     <configuration name="TestApplicationContext.testBeanInstance (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kotring" />
       <extension name="coverage">
@@ -145,11 +159,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplicationContext.testBeanInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kotring" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestApplicationContext" />
-      <option name="METHOD_NAME" value="testBeanInstance" />
+    <configuration name="TestApplicationContext.testInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kotring-context" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit" />
+      <option name="MAIN_CLASS_NAME" value="unit.TestApplicationContext" />
+      <option name="METHOD_NAME" value="testInstance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,7 +235,6 @@
         <item itemvalue="JUnit.TestProperty.testProperty" />
         <item itemvalue="JUnit.TestApplicationContext.trial (1)" />
         <item itemvalue="JUnit.TestApplicationContext.testBeanInstance (1)" />
-        <item itemvalue="JUnit.TestApplicationContext.testBeanInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +277,9 @@
       <workItem from="1691751635595" duration="2654000" />
       <workItem from="1691754939355" duration="20813000" />
       <workItem from="1691819296413" duration="3538000" />
-      <workItem from="1691847409850" duration="9189000" />
+      <workItem from="1691847409850" duration="10259000" />
+      <workItem from="1691862425377" duration="1713000" />
+      <workItem from="1691892028093" duration="5339000" />
     </task>
     <servers />
   </component>
@@ -284,13 +305,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt</url>
-          <line>117</line>
+          <url>file://$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt</url>
+          <line>109</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/com/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt</url>
-          <line>133</line>
+          <url>file://$PROJECT_DIR$/kotring-context/src/main/kotlin/org/cheparity/kernel/core/context/AnnotaionConfigApplicationContext.kt</url>
+          <line>125</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
